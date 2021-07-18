@@ -1,0 +1,124 @@
+@creditGraphDim : 294px;
+@mobileCreditGraphDim : 230px;
+@mobileCreditGraphHeight : 115px;
+.credit-graph-section{
+    position: relative;
+    margin:0 auto;
+    max-width: @creditGraphDim;    
+    @media all and (max-width:767px){
+        max-width: @mobileCreditGraphDim;      
+    } 
+}
+.creditCount-wrapper{
+    height: @creditGraphDim;
+    width: @creditGraphDim;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 1;   
+    @media all and (max-width:767px){
+        width: @mobileCreditGraphDim;
+        height: @mobileCreditGraphDim; 
+    } 
+    .creditCount{
+        position: absolute;
+        left:5px;
+        top:5px;
+        width: 53px;
+        height: 53px;
+        line-height: 49px;
+        border-radius: 53px;
+        background-color: @yellow;
+        text-align: center;
+        border: 2px solid #EDEDE8;
+        font-size: 16px;
+        color:#fff;
+        font-weight: 600;  
+        &.remain-credit{
+            background-color: @primaryColor;
+        }      
+    }
+}
+.credit-graph-legends-wrapper{
+    text-align: center;
+    .credit-graph-legend{
+        position: relative;
+        display: inline-block;
+        padding-left:15px;
+        font-size: 12px;
+        color:@yellow;
+        font-weight: 600;
+        margin-right: 30px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:before{
+            content:'';
+            display: block;
+            width:8px;
+            height: 8px;
+            background-color: @yellow;
+            position: absolute;
+            left:0;
+            top:6px;
+        }
+        &.remain{
+            color:@primaryColor;
+            &:before{
+                background-color: @primaryColor;
+            }
+        }
+    }
+}
+.credit-graph-wrapper{    
+    height: 147px;    
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    transform: scaleX(-1);
+    @media all and (max-width:767px){
+        height:@mobileCreditGraphHeight
+    }
+    .total-rewards-graph, .spent-rewards-graph{
+        width: @creditGraphDim;
+        height: @creditGraphDim;        
+        position: absolute;        
+        left:0;
+        top:0;     
+        @media all and (max-width:767px){
+            width: @mobileCreditGraphDim;
+            height: @mobileCreditGraphDim; 
+        }
+    }
+    
+    .remain .spent-rewards-graph-inner, .spent-rewards-graph-inner{
+        &:before{
+            content:'';
+            width: @creditGraphDim;
+            height: @creditGraphDim;
+            border-radius: @creditGraphDim;
+            border:29px solid @primaryColor;
+            position: absolute;
+            left:0;
+            top:0;
+            @media all and (max-width:767px){
+                width: @mobileCreditGraphDim;
+                height: @mobileCreditGraphDim; 
+            }
+        }
+    }
+    .spent-rewards-graph-inner{
+        position: relative;
+        height: 147px ;
+        overflow: hidden;
+        @media all and (max-width:767px){
+            width: @mobileCreditGraphDim;
+            height:@mobileCreditGraphHeight            
+        }
+        &:before{
+            border-color: @yellow;
+        }
+    }   
+}

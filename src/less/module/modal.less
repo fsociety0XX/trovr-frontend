@@ -1,0 +1,251 @@
+.ui.modal{ 
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.16);
+    > .header{
+        background-color: @tableColor;
+        font-size: 24px !important;
+        font-weight: 600;
+        color:@primaryColor;
+        line-height: 1.2;
+        border-bottom: 0;
+        padding:23px 10px;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        @media all and (max-width:767px){
+            font-size: 16px !important;
+        }
+    }
+     .content{
+         background: none !important;
+        padding-top: 30px;
+        .ui.selection.dropdown > .dropdown.icon{
+            top:16px;
+        }
+    }
+    > .actions{
+        border-top:0;
+        background: none;
+        text-align: center;
+        padding-bottom: 40px;
+        >.button{
+            margin-left: 0;
+            margin-right:30px;
+            &:last-child{
+                margin-right: 0;
+            }
+            @media all and (max-width:767px){
+                margin-right:10px;
+            }
+        }
+        button{
+            min-width: 170px;
+            @media all and (max-width:767px){
+                min-width: 110px;                
+            }
+        }
+    }
+    &.create-segment-popup{
+        max-width: 552px;
+        .content{
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .content, .actions{
+            max-width: 400px;
+            margin:0 auto;
+            padding-left:15px;
+            padding-right:15px;
+        }
+        .actions { 
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            button{
+                margin-right:30px;
+                margin-left:0;
+                min-width: 170px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                @media all and (max-width:767px){
+                    min-width: 120px;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .ui.header{
+            text-align: center;
+            font-size: 30px;
+            color:@primaryColor;
+            font-weight: 400;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+            color:@primaryColor;
+            font-weight: 300;
+        }
+    }
+    &.store-reward-popup, &.redeem-popup, &.postcode-popup, &.qr-popup{
+        max-width: 552px;
+        h2.ui.header{
+            font-size: 30px;
+            font-weight: 600;
+            color:@primaryColor;
+            text-align: center;
+            font-family: @bodyFamily1;
+            max-width: 345px;
+            margin:0 auto;
+            @media all and (max-width:767px){
+                font-size: 20px;
+            }
+        }
+        p{
+            text-align: center;
+            margin-top: 15px;
+            @media all and (max-width:767px){
+                font-size: 12px;
+            }
+        }
+        .popupDeleteIcon{
+            margin-bottom: 40px;
+        }
+    }
+    &.postcode-popup{
+        h2.ui.header{
+            max-width: none;
+        }
+    }
+    &.qr-popup{
+        max-width: 552px;
+        .content{
+            position: relative;
+        }
+        .close-btn{
+            position: absolute;
+            right:15px;
+            top:15px;
+            width: 48px;
+            height: 48px;
+            background-color: @lighGreen;
+            border-radius: 48px;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right:0;
+            min-height: 0;
+            @media all and (max-width:767px){
+                width:40px;
+                height:40px;
+                right:5px;
+                top:5px;
+            }
+            &:hover{
+                background-color: @brandGreen;
+                svg{
+                    fill:#fff;
+                }
+            }
+            svg{
+                fill:@brandGreen;
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .qr-code-wrapper{
+            max-width: 342px;
+            margin:20px auto 34px;
+            padding:35px;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ADB74FFF' stroke-width='1' stroke-dasharray='20%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            @media all and (max-width:767px){
+                padding:10px;
+            }
+            svg.qr-svg{
+                display: block;
+                margin:0 auto;
+                @media all and (max-width:767px){
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+    
+}
+
+.ui.dimmer{
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.popupDeleteIcon{
+    position: relative;
+    width: 83px;
+    height: 83px;
+    border-radius: 83px;
+    background-color: @offwhite;
+    box-shadow: 0 5px 5px 0 #ddddde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:-60px auto 0;
+    .icon-wrapper{
+        width: 52px;
+        height: 52px;
+        background-color: @staff-card-color;
+        border-radius: 52px;
+        display: inline-block;
+        vertical-align: top;            
+        position: relative;    
+        .circle{
+            width: 32px;
+            height: 32px;
+            background-color: @lightBlue;
+            border-radius: 42px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -16px 0 0 -16px;
+        }              
+    }
+    svg{
+        fill:@lightBlue;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Rewards filter modal stars*/
+.ui.modal{
+    &.reward-filter-popup, &.multiple-filter-popup {
+    max-width: 941px;
+    width: 100%;
+    .content{
+        padding-top:25px;
+        padding-left:40px;
+        padding-right: 40px;
+    }
+    .checbox-field{
+        border-bottom:1px solid rgb(67 76 81 / 10%);
+        padding-bottom:12px;
+        margin-bottom: 15px;
+    }
+    @media all and (max-width:991px){
+        .grid .column{
+            width: 100% !important;
+        }
+    }  
+    .actions{
+        padding-top:28px;
+    }  
+}
+}
+/* Rewards filter modal ends*/
+.ui.modal{
+    &.multiple-filter-popup {
+.content .ui.selection.dropdown > .dropdown.icon{
+    top:8px
+}
+}
+}
+

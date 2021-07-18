@@ -1,0 +1,68 @@
+#consumer-dashboard .reward-list{
+    background: none;
+    padding:0;
+    @media all and (max-width:767px){
+        margin-bottom: 30px;
+    }
+}
+.reward-list{
+    padding:26px 21px;
+    background-color: @dashboardSectionBg;    
+    border-radius: 10px;    
+    .ui.grid{        
+        .column{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            @media all and (max-width:767px){
+                width: 100% !important;
+            }
+        }
+    }
+    .rewards-no-data{
+        color:@primaryColor;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: @bodyFamily2;
+        text-align: center;
+        flex:1;
+        padding-bottom: 23px;
+    }
+}
+.ui.grid{    
+    &.reward-simple-list{
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    &.rewards-columns{
+        margin:0 -31px;
+        min-height: 857px;
+        > .column{
+            padding:0 31px;
+            @media all and (max-width:767px){
+                width:100% !important;                
+            }
+            .column{
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+        }
+        .section-centered{
+            min-height: 641px;
+            @media all and (max-width:767px){
+                min-height: 262px;
+            }
+        }
+    }
+}
+
+.rewards-page{
+    margin-top:-10px;
+    @media all and (min-width:768px){
+    .header-segment .header-dropdown{
+        margin-top:2px;
+    }
+    }
+    .reward-list{
+        padding-bottom: 3px;
+    }
+}

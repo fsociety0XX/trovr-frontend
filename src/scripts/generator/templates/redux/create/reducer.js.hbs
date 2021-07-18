@@ -1,0 +1,25 @@
+import {
+    {{constantCase action_name}}_BEGIN,
+    {{constantCase action_name}}_SUCCESS,
+    {{constantCase action_name}}_ERROR
+} from '../actions/types';
+
+const initialState = {
+  userList: {
+    loading: false,
+    data: [],
+  },
+}
+
+export default (state = initialState, action) => {
+    switch (action.type) {
+        case {{constantCase action_name}}_BEGIN:
+        case {{constantCase action_name}}_SUCCESS:
+        case {{constantCase action_name}}_ERROR:
+            return state;
+        default:
+            return state;
+
+    // plopImport
+    }
+}

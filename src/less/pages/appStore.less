@@ -1,0 +1,57 @@
+.mobile-app-page{
+    @media all and (min-width:768px){
+        overflow: hidden;
+        height: calc(100vh);
+    }
+    .logo-section{
+        background-color: @offwhite;
+        text-align: center;
+        padding:37px 0;
+    }
+    .logo-text{
+        font-size: 12px;
+        color:@primaryColor;
+        font-weight: 300;
+    }
+    .description-section{
+        padding:30px;
+        min-height: calc(100vh - 260px);
+        h2{
+            font-size: 18px;
+            color: @primaryColor;
+        }
+    }
+    .footer{
+        background-color: @primaryColor;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 20px;
+        min-height: 121px;
+        .logo { 
+            margin-right: 25px;
+            &:last-child{
+                margin-right: 0;
+            }
+            svg{
+                width: 58px;
+                height: 56px;
+                *{
+                    fill: #fff !important;
+                    stroke: transparent !important;
+                }
+            }
+        }
+        .playstore-logo{
+            border:1px solid #141818;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            cursor: pointer;
+            svg, img{
+                display: block;
+            }
+        }
+    }
+}

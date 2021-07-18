@@ -1,0 +1,255 @@
+.consumer-dashboard {
+    @media all and (max-width:767px){
+        overflow: hidden;
+    }
+    // supports dashboard design for ipad and ipad Pro device // 
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        padding: 15px;
+    }
+    .consumer-points-wrapper{
+        margin-bottom: 6px;        
+    }
+    .credit-graph-block{
+        margin-top: -11px;
+        margin-bottom: -7px;
+    }
+    .trovr-ad-box {
+        color: @secondaryColor;        
+        font-size: @regular;
+        font-weight: @semiBold;
+        border: 1px solid @secondaryColor;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 auto 22px;
+
+        @media all and (max-width:767px) {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        img{
+            height:180px;
+            display: block;
+            object-fit: cover;
+            &.desktop-banner{
+                display: none;
+            }        
+            @media all and (min-width:768px){                
+                height:160px;
+                &.mobile-banner{
+                    display: none;                                      
+                }            
+                &.desktop-banner{
+                    display: block;
+                }
+            }
+        }
+        .carousel .control-dots .dot{
+            box-shadow: none;
+            opacity: 1;
+            margin:0 4px;
+            &.selected{
+                background-color: @lightBlue;
+            }
+        }
+        .carousel-slider { 
+            .slide a{
+            position: relative;
+            overflow: hidden;
+            display: block;
+            &:before{
+                content:'';
+                display: block;
+                position: absolute;
+                left:0;
+                right:0;
+                bottom:0;
+                height:46px;
+                background: rgb(34,41,44);
+    background: linear-gradient(0deg, rgba(34,41,44,1) 0%, rgba(42,49,53,0.5662640056022409) 39%, rgba(49,57,61,0.028448879551820738) 74%, rgba(255,255,255,0) 100%);
+                z-index: 1;
+            }
+        }
+        .control-dots{
+            z-index: auto;
+            margin-bottom: 0;
+            bottom:7px;
+            .dot{
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+    }
+
+    .balance-container {
+        background-color: lighten(@lighYellow, 11%);
+        padding: 22px 15px;
+        border-radius: 10px;
+        position: relative;
+        min-height: 99px;
+        overflow:hidden;
+
+        @media all and (max-width:767px) {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .balance,.balance-analysis {
+            vertical-align: middle;
+            display: inline-block;
+            font-size: @small;
+            padding-left: 20px;
+
+            .amount {
+                font-size: @huge;
+                margin-top: 10px;
+            }
+            
+        }
+
+        .balance {
+            width: 60%;
+
+            .amount {
+                color: @brandGreen;
+
+                .currency-symbol {
+                    font-size: @regular;
+                    margin-left: 5px;
+                    line-height: 10px;
+                    vertical-align: unset;
+                }
+            }
+        }
+
+        .balance-analysis {
+            width: 40%;
+            vertical-align: top;
+
+            .amount {
+                color: @darkBlue;
+
+                svg {
+                    margin-right: 10px;
+                }
+                .currency-symbol {
+                    font-size: @regular;
+                    margin-left: 5px;
+                    line-height: 10px;
+                    vertical-align: unset;
+                }
+            }
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -25px;
+            top: -40px;
+            width: 80px;
+            height: 80px;
+            background:@lighYellow;
+            border-radius: 80px 80px 80px 80px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: @lighYellow;
+            border-radius: 80px 80px 80px 80px;
+            left: -20px;
+            bottom: -65px;
+        }
+    }
+
+    .reward-history-wrapper,
+    .recent-rewards-wrapper,
+    .transactions-wrapper,
+    .credits-wrapper {
+        
+        .header-segment {
+            
+
+            .header-dropdown {
+                float:right;
+                font-size: @small;
+
+                @media all and (max-width:767px) {
+                    float: none;
+                    width: 100%;
+                    padding: 10px 0;
+                }
+
+                .selection {
+                    padding: 10px 30px;                    
+                    min-width: 140px;
+                    position: relative;
+                    border-color: @secondaryColor;
+                    border-radius: 3px;
+
+                    .icon {
+                        color: @secondaryColor;
+                        font-size: @regular;
+                        top: 4px;
+                        right: 6px;
+                    }
+
+                    &.active {
+                        .menu {
+                            border-color: @secondaryColor;
+                            border-radius: 0;
+
+                            .text {
+                                font-size: @small;
+                            }
+                        }
+                    }
+
+                    .divider {
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: 10px;
+                            width: 10px;
+                            top: 11px;
+                            height: 10px;
+                            background-image: url("../../assets/images/calendar.svg");
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .transactions-wrapper .header-segment{
+        margin-bottom: 15px;
+    }
+
+    .rewards-columns .header-segment{
+        margin-bottom: 18px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar {
+        width: 3px !important;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .rewards-no-data{
+        margin-top: 60px;
+    }
+}
+

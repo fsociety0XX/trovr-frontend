@@ -1,0 +1,375 @@
+.cards-content {
+    background: @dashboardSectionBg;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 520px;
+
+    &.credits-content {
+        min-height: 238px;
+        margin-bottom: 5px;
+        overflow: visible;
+        padding-top:47px;
+    }
+    .spent-analysis {
+        font-size: 40px;
+        color: @brandGreen;
+        margin-bottom: 18px;
+        @media all and (max-width:767px) {
+            margin-bottom: 10px;
+        }
+        svg {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            @media all and (max-width:767px) {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    .earned-rewards {
+        color: @primaryColor;
+        font-size: @small;
+        margin-bottom: 7px;
+        padding-top:80px;
+        @media all and (max-width:767px) {
+            padding-top:60px;
+        }
+    }
+}
+.ui.card.transection-card{    
+        background: none;
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            height: 1px;
+            background-color: @offwhite;
+            left: 70px;
+            right: 15px;
+        }
+
+        .reward-icon {
+            background: @offwhite;
+            padding: 16px;
+            border-radius: 50%;
+            height: 47px;
+            width: 47px;
+            display: inline-block;
+
+            svg {
+                height: 16px;
+                width: 16px;
+            }
+        }
+
+        .reward-info {
+            width: 55%;
+            display: inline-block;
+            padding: 10px;
+            vertical-align: middle;
+
+            @media all and (max-width:767px) {
+                width: calc(100% - 47px);
+            }
+
+            .header {
+                font-weight: @semiBold;
+                font-size: @medium;
+            }
+
+            .meta {
+                font-size: @tiny;
+                margin-top: 5px;
+
+                .highlight {
+                    font-weight: @semiBold;
+                    color: @darkBlue;
+                }
+            }
+
+            .food,
+            .free,
+            .clock {
+                display: inline-block;
+                font-size: @small;
+                margin: 0px 24px 0 -3px;
+
+                svg {
+                    margin: 0px 2px;
+                }
+            }
+
+            .points,
+            .discount {
+                display: inline-block;
+                font-size: @tiny;
+                margin: 0px 24px 0 0px;
+
+                svg {
+                    margin: 0px 2px;
+                }
+            }
+
+
+            &.recent-reward-info,&.transaction-info {
+                width: 70%;
+                @media all and (max-width:767px) {
+                    width: calc(100% - 47px);
+                }
+            }
+
+            &.transaction-info {
+                .meta {
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .reward-right-section {
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: end;
+
+            @media all and (max-width:767px) {
+                width: 100%;
+                padding: 5px 0 15px;
+            }
+
+            //this supports dashboard for Ipad Pro device // 
+            @media only screen and (min-width: 992px) and (max-width: 1024px)  {
+                width:28%;
+            }
+
+            &.recent-reward-section,
+            &.transaction-right-section {
+                width: 15%;
+
+                @media all and (max-width:767px) {
+                    padding: 5px 10px 15px;
+                    margin-left: 47px;
+                    width: auto;
+                } 
+
+                @media only screen and (min-width: 992px) and (max-width: 1024px)  {
+                    width:11%;
+                }
+            }
+
+            button {
+                padding: 6px 15px;
+                font-size: @small;
+                font-weight: @normal !important;
+                min-height: 0;
+                background: @oceanBlue;
+                border-radius: 2px;
+                min-width: 80px;
+                color: @primaryColor;
+
+                @media all and (max-width:767px) {
+                    width: 100%;
+                    float: none;
+                }
+            }
+
+            .transaction-amount {
+                color: @lightBlue;
+                font-size: @regular;
+            }
+        }
+
+        .content {
+            padding: 10px 15px 0px;
+        }
+
+        &.notification {
+            .reward-icon {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: -7px;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("/public/svg/Shoutout.svg");
+                }
+            }
+        }
+
+        &.used {
+            .reward-info {
+                .header,.meta,.highlight {
+                    color: @secondaryColor;
+                }
+            }
+
+            .reward-right-section {
+                button {
+                    background: @lightGray;
+                }
+            }
+
+            .reward-icon {
+                background: @lightGray;
+            }
+        }
+    }
+.reward-card{  
+    border-radius: 10px;  
+    overflow: hidden;
+    &.redeemed-card{
+        position: relative;
+        &:after{
+            content:'';
+            display: block;
+            position: absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(67,76,81,0.6);
+        }
+    }
+    .image{
+        background: url(/public/image/reward-card-bg.jpg) repeat @primaryColor;
+        height: 177px;        
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        position: relative; 
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: rgba(255,255,255,0.5);
+        }  
+    }
+    .caption{
+        font-size: 18px;
+        font-weight: 600;
+        font-family: @bodyFamily2;
+        color:@brandGreen;
+    }
+    .type{
+        min-width: 94px;
+        line-height: 1.2;
+        background-color: #fff;
+        border-radius: 0 0 5px 5px;
+        padding:5px 10px;
+        font-size: 12px;
+        font-weight: 300;
+        color:@primaryColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+        right:30px;
+        svg{
+            margin-right: 8px;
+        }        
+    }
+    .title-wrapper{
+        background-color: @lighGreen;
+        padding: 16px 21px 18px 21px;
+        h2{
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 600;
+            color:@brandGreen;
+            margin-bottom: 8px;
+        }               
+    }
+    .data-price-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .date{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        color:@primaryColor;            
+        strong{
+            font-weight: 600;
+        }
+    }
+    .price{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 600;
+        color:@primaryColor;    
+        margin-left: auto;  
+        svg{
+            margin-right:10px;
+        }
+    } 
+    .button-wrapper{
+        display: flex;
+        @media all and (max-width:364px){
+            flex-direction: column;
+        }
+        .ui.button{
+            width: 50%;
+            height: 39px;
+            font-size: 12px;                
+            font-weight: 600;
+            color:#fff;    
+            margin-right: 0;                
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+            padding: 0;
+            @media all and (max-width:364px){
+                width: 100%;
+            }
+            &.save-for-later{
+                background-color: @brandGreen;
+                svg{
+                    fill: #fff;
+                    width: 17px;
+                    height: 15px;
+                }
+                &:hover{
+                    color:@primaryColor;
+                    svg{
+                        fill: @primaryColor;
+                    }
+                }
+            }
+            &.redeem-now{
+                background-color: @primaryColor;
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    fill: #fff;
+                }
+                &:hover{
+                    color:@brandGreen;
+                    svg, svg *{
+                        fill: @brandGreen;
+                    }
+                }               
+            }
+            &.redeemed{
+                background-color: @primaryColor;
+                width: 100%;
+                cursor: default;
+            }
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
+}

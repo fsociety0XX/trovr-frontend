@@ -1,0 +1,411 @@
+.dark-page{
+    background: #F8DD73;
+    background: linear-gradient(-45deg, #F8DD73 50%, #fae9a1 100%);
+    min-height: calc(100vh);
+    .loader-wrapper{
+        background: rgb(39,46,50);
+        background: linear-gradient(
+            -45deg
+            , #272e32c4 50%, rgb(69 76 80 / 75%) 100%);      
+    }
+    .container{
+        max-width: 1080px;
+        margin:0 auto;
+        padding:100px 15px 145px;
+        @media all and (max-width:1100px){
+            padding-left:60px;
+            padding-right:60px;
+        }
+        @media all and (max-width:767px){
+            padding:30px 15px;
+        }
+    }
+    .ui.header{
+        font-size: 40px;
+        line-height: 1.4;
+        color:@primaryColor;
+        font-weight: 300;
+        @media all and (min-width:768px){
+            margin-bottom:54px;
+            margin-top:55px;
+        }
+        strong{            
+            font-weight: 700;
+        }
+        @media all and (max-width:767px){
+            font-size: 24px;
+        }
+    }
+    h1{
+        @media all and (min-width:768px){
+            width: 435px;
+        }
+    }
+    h2.ui.header{
+        font-size: 24px;
+        font-family: @bodyFamily2;
+        font-weight: 700;
+        color:@primaryColor;
+        margin-top:17px;
+        margin-bottom:26px;
+    }
+    p{
+        font-family: @bodyFamily2;
+        font-weight: 300;
+        margin-bottom:22px;
+        color:@primaryColor
+    }   
+    
+    .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url]{
+        background-color: #fff;
+        color:@primaryColor !important;           
+    }
+    .ui.form .field.field input:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 100px transparent inset!important;
+    box-shadow: 0 0 0 100px #fff inset!important;
+    border-color: #fff!important;
+    -webkit-text-fill-color:@primaryColor !important
+    }
+
+    .ui.left.icon.input{
+        background-color: #fff;
+        svg{
+            fill: @primaryColor;
+        }       
+        .right-icon{
+            position: absolute;
+            cursor: pointer;
+            fill: @primaryColor;
+            left: auto;
+            right: 22px;
+            top: 16px;
+            svg{
+                position: static;
+                &.striked-eye{
+                    position: relative;
+                    left: 1px;
+                    top: 1px;
+                }
+                &:hover{
+                    fill: @yellow;
+                }
+            }
+        }
+    }
+    .ui.left.icon.select{
+        background-color: #fff;      
+    }
+    
+    .ui.dropdown>.text{
+        color:@primaryColor;
+        font-family: @bodyFamily1;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .ui.checkbox{
+        margin-top:2px;
+    
+        label, +label{
+            color:@primaryColor !important;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: @bodyFamily1;
+            padding-left:40px;
+            line-height: 20px;
+            @media all and (max-width:767px){
+                padding-left:25px;
+                font-size: 14px;
+            }
+        }
+    
+    .box:before, label:before{
+        background: none  !important;
+        border:1px solid @primaryColor !important;
+        border-radius: 3px;    
+            
+    }
+
+     input:checked:focus~.box:before, input:checked:focus~label:before, input:not([type=radio]):indeterminate:focus~.box:before, input:not([type=radio]):indeterminate:focus~label:before {
+        // background: none !important;
+        border-color: #96c8da;
+    }
+
+     input:checked~.box:before, input:checked~label:before{
+        background: @primaryColor !important;
+    }
+     
+}
+
+    .forgot-password-link{
+        float: right;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: @bodyFamily1;
+        color:@primaryColor;
+        margin-top:2px;
+        &:hover{
+            color:@secondaryColor;
+        }
+        @media all and (max-width:767px){
+            font-size: 14px;
+        }
+    }
+    .login-button{
+        margin-top:43px;
+    }
+    .ui.grid>.column:not(.row).login-form-column{
+        @media all and (min-width:768px){
+            padding-top:108px;
+        }
+    }
+    .ui.form { 
+        .field{
+            @media all and (min-width:768px){
+                margin-bottom:40px;
+            }
+        }
+        .column { 
+            .field{
+                margin-bottom: 0;
+            }
+            .error.message {
+                margin-bottom: -15px;
+            }
+        }
+    }
+    .login-inner-column{
+        max-width: 370px;
+    }
+    .login-form-column{
+        .login-inner-column{
+            margin-left:auto;
+        }
+    }
+}
+
+.login-process-block-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top:70px;
+    margin-left:-28px;
+    .login-process-block{
+        width: 124px;
+        text-align: center;
+        margin-right:12px;
+        .title{
+            font-size: 24px;
+            line-height: 1.4;
+            color:@primaryColor;
+            font-weight: 700;
+            font-family: @bodyFamily2;
+            @media all and (min-width:768px){
+                min-height: 65px;
+            }
+            margin-bottom:24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle-icon{
+            width: 66px;
+            height: 66px;
+            border-radius: 66px;
+            background-color: @primaryColor;
+            line-height: 76px;
+            margin:0 auto;
+            svg{
+                fill:@yellow
+            }
+        }
+    }
+    .login-process-arrow{
+        svg{
+            fill:@primaryColor
+        }
+        @media all and (min-width:768px){
+            margin-top:90px;
+            margin-right:11px;
+        }
+    }
+}
+
+
+
+.another-login-options-wrapper{
+    margin-top:52px;
+    .or-continue-with-text{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: @bodyFamily1;
+        color:@primaryColor;
+        position: relative;
+        &:before, &:after{
+            content:'';
+            display: block;
+            position: absolute;
+            top:10px;
+            height: 1px;
+            background-color: @primaryColor;
+        }
+        &:before{
+            left:0;
+            right: 50%;
+            margin-right:73px;
+            
+        }
+        &:after{
+            left:50%;
+            right:0;
+            margin-left:73px;
+            
+        }
+    }
+
+    .another-logins{
+        display: flex;
+        margin:31px -10px 0;
+        .another-login-item{
+            width: 33.33%;
+            padding:0 10px;
+            button{
+                background: none;
+                width: 100%;
+                text-align: center;
+                border: 1px solid @primaryColor;
+                border-radius: 5px;
+                height: 50px;
+                cursor: pointer;
+                padding:0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+            }
+            button:hover{
+                background-color: #fff;
+                border-color: #fff;                
+            }
+            &.google svg{
+                width: 21px;
+                height: 22px;
+            }
+            &.apple svg{
+                width: 21px;
+                height: 25px;
+            }
+            &.facebook svg{
+                width: 12px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+.dark-page{
+
+    @media all and (max-width:991px){
+        .ui.grid.login-columns{
+            flex-direction: column;
+            .column{
+                display: block;
+                width: auto;
+            }
+        }
+        .login-inner-column{
+            margin:0 auto;
+        }
+        .login-process-block-wrapper{
+            max-width: 425px;
+            margin-left:auto;
+            margin-right:auto;        
+        }
+    }
+    @media all and (max-width:767px){
+        .login-process-block-wrapper{
+            display: none;           
+        }
+    }
+
+    .ui.basic.button.go-back-link{
+        font-size: 16px;
+        color:@primaryColor !important;
+        font-weight: 300 !important;
+        font-family: @bodyFamily2;
+        cursor: pointer;
+        background: none !important;
+        box-shadow:none;
+        svg{
+            margin-right:20px;
+            fill: @primaryColor;
+        }
+    }
+    .register-step-2{
+        margin-top:-37px;
+        .ui.checkbox{
+            margin-bottom:25px;
+            label, +label{
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 300;
+                color:@primaryColor !important;
+                font-family: @bodyFamily1;                
+            }
+        }
+        .ui.checkbox .box:before, .ui.checkbox label:before{
+            top:3px;
+        }
+        .ui.checkbox input:checked~.box:after, .ui.checkbox input:checked~label:after{
+            top: 5px;
+            left: 2px;
+        }
+        .register-button{
+            margin-top:15px;
+            margin-bottom:49px;
+        }
+        .t-c-text{
+            font-size: 16px;
+            color:@primaryColor;
+            font-weight: 300;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom:18px;
+        }
+        .t-c-button{
+            background-color: @secondaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color: @secondaryColor;
+                box-shadow: 0 0 10px -5px #000;
+            }
+            svg{
+                margin:0 15px 0 0;
+            }
+        }
+    }
+
+    @media all and (max-width:767px){
+        .login-logo-wrapper{
+            text-align: center;
+            svg{
+                width: 150px;
+            }
+        }
+        .mobile-extra-link{
+            margin-top: 30px;
+            .white-text{
+                text-align: center;
+            }
+        }
+    }
+
+    .ui.form .error.message, .ui.form .success.message, .ui.form .warning.message{
+        display: block !important;
+    }
+    .ui.form .error.message{        
+        color: #f90844;
+        margin-bottom: 15px;
+    }
+}

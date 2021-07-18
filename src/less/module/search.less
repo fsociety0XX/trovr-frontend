@@ -1,0 +1,210 @@
+.ui.search>.results{
+    >.message .header{
+        font-family: @bodyFamily1;
+        font-weight: 400;
+    }
+    .result .title{
+        font-family: @bodyFamily1;
+        font-weight: 400;
+    }
+}
+.search-with-filter{
+    margin-left: auto;
+    position: relative;
+    width: 180px;
+    .search-filter-wrapper{
+        position: absolute;
+        right: 14px;
+        top: 11px;
+        padding-left: 17px;
+        .search-filter-icon{
+            cursor: pointer;
+        }
+        &:before{
+            content:'';
+            display: block;
+            position: absolute;
+            left:0;
+            top:2px;
+            width: 1px;
+            height: 15px;
+            background-color: rgb(69 76 80 / 40%);
+        }
+    }
+    .ui.search{            
+        input{
+            background: none;
+            border:1px solid #454C50;       
+            border-radius: 5px;         
+            padding-left:41px;
+            padding-right: 50px !important;
+            width: 100%;
+            min-height: 40px;
+        }
+        i.icon{
+            left: 9px;
+            color: @primaryColor;
+            top: 0px;
+            font-size: 13px;
+        }            
+    }
+}
+
+.search-with-filter{
+    .ui.left.icon.input{
+        background: none;
+        border:1px solid @primaryColor;
+        input{
+            height:40px;
+            padding-left: 45px !important;
+            padding-right:47px !important;
+        }
+    }
+    .ui.selection.dropdown{
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 47px;
+        border: 0;
+        box-shadow: none;
+        background:none;
+        z-index: 1;
+        bottom: 0;
+        box-shadow: none !important;
+        > .text{
+            opacity: 0;
+        }
+        >.dropdown.icon{
+            display: none;
+        }
+        > .menu{
+            width: 80px;
+            left: auto;
+            right: 0;
+        }        
+    }
+}
+
+.rewards-filter-wrapper{
+    &, &.ui.left.icon.select{
+        width: 142px;
+        border:1px solid @secondaryColor;    
+        color:@primaryColor;
+        font-weight: 300;
+        border-radius: 5px;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        cursor: pointer;    
+        padding-top:0;
+        background: none;  
+        font-size: 12px;      
+        svg{
+            fill:@secondaryColor;
+            margin-right: 10px;
+            width: 10px;
+            left: 10px;
+            circle, ellipse#Ellipse_8-2{
+                fill:#fff !important
+            }
+        }
+        .ui.selection.dropdown{
+            padding-left: 25px !important;
+            box-shadow: none;
+            >.text{
+                line-height: 16px;
+                font-size: 12px;
+            }
+            > .dropdown.icon{
+                top:11px;
+                color:@secondaryColor;
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+
+.only-filter-wrapper{
+    width:250px;
+    margin-right: 15px;
+    padding-left: 60px;
+    background-color: @inputBackground;    
+    position: relative;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: 300;
+    color:@primaryColor;
+    cursor: pointer;
+    svg{
+        position: absolute;
+        left:20px;
+        top:20px;
+    }
+    @media all and (max-width:767px){
+        width:auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }   
+}
+
+
+.segment-list-page{
+    position: relative;
+    .page-header{
+        @media all and (max-width:991px){
+            margin-bottom: 0;
+        }
+    }
+    .ui.input.segment-search{
+        @media all and (min-width:992px){
+            position: absolute;
+            width:209px;
+            top:0;
+            right:214px;
+        }
+        @media all and (max-width:991px){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.admin-main-container .consumer-history-page .page-right-header{
+    @media all and (max-width:991px){
+        flex-direction: column;
+        .search-box{
+                order: 3;
+        }
+    }    
+}
+
+.admin-main-container { 
+    .voucher-redemption-report-page, .transection-report-page{
+        .page-header{
+            @media all and (max-width:1300px){
+                flex-direction: column;
+                align-items: flex-start;
+                .only-filter-wrapper{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .page-right-header{
+            @media all and (max-width:1300px){
+                margin-top: 15px;
+                flex-direction: column;
+                margin-left: 0;
+                width: 100%;
+                .search-box.ui.input{
+                    order: 4;
+                    margin-top: 15px;
+                    margin-right: 0;
+                }
+                .calendar-fields{
+                    margin-right: 0;
+                }
+            } 
+        }
+    }
+}

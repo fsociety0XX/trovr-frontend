@@ -1,0 +1,148 @@
+.consumer-setting-page{
+    padding-bottom:38px;
+    .ui.tab{
+        margin-top:44px;
+    }
+}
+
+/* Help and support tab starts */
+.help-support-tab{
+    max-width: 490px;
+    margin:0 auto;
+    padding:0 15px;    
+    h1.ui.header{
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        font-family: @bodyFamily1;
+        color:@secondaryColor;
+        margin-bottom: 30px;
+    }
+    .text{
+        margin-bottom: 30px;
+    }
+    @media all and (max-width:767px){
+        padding:40px 0;
+        .ui.grid{
+            flex-direction: column;
+            .column{
+                width: auto !important;
+            }
+        }
+    }    
+}
+
+/* Help and support tab ends */
+
+/* Faq tab starts */
+.faq-tab{
+    @media all and (max-width:1150px){
+        padding:40px 0;
+    }
+    .accordion.ui{
+        max-width: 970px;
+        margin: 0 auto;
+        .title{
+            color:@secondaryColor;
+            border-bottom:3px solid @offwhite;
+            position: relative;
+            padding-bottom:20px !important;
+            &:before{
+                content:'';
+                border-left:7px solid transparent;
+                border-right:7px solid transparent;
+                border-top:7px solid @secondaryColor;
+                position: absolute;
+                right:2px;
+                top:22px;
+                transform: rotate(0);
+                -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease;
+            }
+            &.active{
+                color:@secondaryColor;
+                &:before{
+                    transform: rotate(-90deg);
+                }
+            }            
+        }
+        .content{
+            padding:19px 0 25px !important;
+        }
+    }
+    .searchbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        @media all and (max-width:767px){
+            flex-direction: column;
+        }
+        margin-bottom:28px;
+        label{
+            margin-right:39px;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 600;
+            font-family: @bodyFamily1;
+            color:@primaryColor;
+            @media all and (max-width:767px){
+                margin-bottom: 30px;
+                margin-right: 0;
+                display: block;
+            }
+        }
+        .field{
+            width: 460px;
+            @media all and (max-width:767px){
+                width: 100%;
+            }
+        }
+    }
+}
+/* Faq tab ends */
+
+/* t&c tab starts */
+.tnc-tab{
+    .accordion.ui{
+        max-width: 970px;
+        margin: 0 auto;
+        .title{
+            color:@primaryColor;
+            border-bottom:3px solid @offwhite;
+            position: relative;
+            padding-bottom:20px !important;
+            &:before{
+                content:'';
+                border-left:7px solid transparent;
+                border-right:7px solid transparent;
+                border-top:7px solid @primaryColor;
+                position: absolute;
+                right:2px;
+                top:22px;
+                transform: rotate(0);
+                -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; transition: all 0.3s ease;
+            }
+            &.active{
+                &:before{
+                    transform: rotate(-90deg);
+                }
+            }            
+        }
+        .content{
+            padding:19px 0 25px !important;
+        }
+    }
+}
+/* t&c tab ends */
+
+/* change password tab starts */
+
+.ui.form.change-password-tab{
+    max-width: 460px;
+    margin:0 auto;
+    @media all and (max-width:767px){
+        padding:40px 0;
+    }
+}
+
+/* change password tab ends */

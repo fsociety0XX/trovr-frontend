@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_16616" data-name="Group 16616" transform="translate(-12 -499)">
+    <circle id="Ellipse_24" data-name="Ellipse 24" cx="10" cy="10" r="10" transform="translate(12 499)" fill="#a9b938"/>
+    <g id="megaphone" transform="translate(16.316 443.67)">
+      <path id="Path_2080" data-name="Path 2080" d="M422.024,137.142a.333.333,0,0,1,.149-.447l1.332-.666a.333.333,0,1,1,.3.6l-1.332.666A.333.333,0,0,1,422.024,137.142Z" transform="translate(-412.619 -73.329)" fill="#edede8"/>
+      <path id="Path_2081" data-name="Path 2081" d="M423.5,287.306l-1.332-.666a.333.333,0,0,1,.3-.6l1.332.666a.333.333,0,0,1-.3.6Z" transform="translate(-412.619 -220.013)" fill="#edede8"/>
+      <path id="Path_2082" data-name="Path 2082" d="M423.659,226.66h-1.332a.333.333,0,1,1,0-.666h1.332a.333.333,0,1,1,0,.666Z" transform="translate(-412.624 -161.331)" fill="#edede8"/>
+      <path id="Path_2083" data-name="Path 2083" d="M184.374,61a.333.333,0,0,0-.333.333v.476A9.758,9.758,0,0,1,180,63.249v3.495a9.758,9.758,0,0,1,4.041,1.441v.476a.333.333,0,0,0,.666,0V61.333a.333.333,0,0,0-.333-.333Z" transform="translate(-176.003)" fill="#fff"/>
+      <path id="Path_2084" data-name="Path 2084" d="M31.569,334.382a2.256,2.256,0,0,1-.368-1.771l-1.645-.183a2.122,2.122,0,0,1-.359-.074,5.125,5.125,0,0,0-.2,1.929c.005.134.01.259.01.373a.333.333,0,0,0,.333.333h2a.333.333,0,0,0,.3-.482Z" transform="translate(-28.34 -265.329)" fill="#edede8"/>
+      <path id="Path_2085" data-name="Path 2085" d="M0,167.567a1.448,1.448,0,0,0,1.289,1.441l2.041.227V165.9l-2.041.227A1.448,1.448,0,0,0,0,167.567Z" transform="translate(0 -102.57)" fill="#edede8"/>
+    </g>
+  </g>
+</svg>

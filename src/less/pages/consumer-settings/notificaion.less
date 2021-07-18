@@ -1,0 +1,58 @@
+.notification-tab{
+    max-width: 410px;
+    margin:0 auto;    
+    .title{
+        .tabMainTitle();
+        &::before{
+            visibility: hidden;
+        }
+    }
+    .items{
+        margin-bottom: 36px;
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .icon{
+            min-width: 45px;
+            width: 45px;
+            height: 45px;
+            border-radius: 45px;
+            background-color: @offwhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right:10px;
+            svg{
+                fill: @primaryColor;
+                width: 13px;
+                height: auto;
+            }
+        }
+        .content{
+            font-size: 14px;
+            line-height: 1.45;
+            font-weight: 300;
+            font-family: @bodyFamily1;
+            color:@primaryColor;
+            padding-right:15px;
+            white-space: pre-line;
+            strong{
+                font-weight: 600;
+            }
+        }
+        .time{
+            font-size: 10px;
+            line-height: 1.2;
+            font-weight: 300;
+            font-family: @bodyFamily1;
+            color:@primaryColor;
+            white-space: nowrap;
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,584 @@
+.ui.form .field{
+    margin-bottom:30px;
+    .phone-field{
+        display: flex;
+        .ui.select{
+            width: 190px;
+            margin-right: 20px;
+            .ui.phone-code{
+                padding-left: 45px !important;
+                min-width: 0;
+            }
+        }
+    }
+}
+
+.ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url]{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: @bodyFamily1;
+    padding: 15px 10px;
+}
+
+.ui.left.icon{
+    &.input, &.dropdown{
+        display: flex;
+        align-items: center;
+        background-color: @inputBackground;
+        border-radius: 5px;
+        position: relative;        
+        border: 0;
+        @media all and (max-width:767px){
+            z-index: 0;
+        }
+    }
+    &.input{
+        overflow: hidden;
+    }
+    &.calendar{
+        overflow: visible;
+        .field{
+           flex: 1;
+           margin-bottom: 0;
+        }
+    }
+    &.selection.dropdown{
+        padding:5px 35px 5px @inputLeftPadding;
+        flex-wrap: wrap;
+        .dropdown.icon{
+            font-size: 20px;
+            color: @primaryColor;
+            padding-top: 14px;
+        }
+        > input.search, > .text{
+            min-height: 40px;
+            margin: 0;
+            line-height: 40px;
+            color:@primaryColor;
+            font-weight: 300;
+        }
+        > .label {
+            margin:5px 5px;
+        }        
+    }
+    .multiple.selection.dropdown { 
+        > input.search{
+            min-height: 0;
+            margin: 0;
+            line-height: 10px;
+            color:@primaryColor;
+            height: 18px;
+        }
+        > .text{
+            margin: 0;
+            padding-bottom:0;
+        }
+    }
+}
+
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.ui.left.icon.input{
+    input, textarea{
+        border: 0;
+        background: none;
+        padding: 0 0 0 @inputLeftPadding !important;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: @bodyFamily1;
+        color:@primaryColor;
+        border-radius: 0; 
+        height: @inputHeight;
+        &[type="password"]{
+            padding-right:50px !important;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: @primaryColor;
+            opacity: 1;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: @primaryColor;
+            opacity: 1;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: @primaryColor;
+            opacity: 1;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: @primaryColor;
+            opacity: 1;
+          }
+    }    
+    &.phone{
+        input{
+            padding-left: 20px !important;
+        }
+        .phone-code{
+            position: absolute;
+            left:60px;
+            font-size: 15px;
+            font-weight: 600;
+            color:@primaryColor;
+            font-family: @bodyFamily1;
+        }
+    }
+    textarea{
+        height: 130px;
+        resize: none;
+        padding-top:16px !important;
+    }
+    &.textarea { 
+        svg{
+        top:15px;
+        &.message-icon{
+            top:20px;
+        }
+        }
+        [disabled] + svg{
+            opacity: 0.45;
+        }
+    }
+    svg{
+        .inputIcon();
+        &.link-icon{
+            stroke: @primaryColor;
+            *{
+                fill:none !important;
+            }
+        }
+    }
+    .right-icon{
+        position: absolute;
+        cursor: pointer;
+        fill: @primaryColor;
+        left: auto;
+        right: 22px;
+        top: 16px;
+        &.disabled{
+            pointer-events: none;
+            opacity: 0.45;
+        }
+        svg{
+            position: static;
+            width: 15px;
+            height: auto;
+            &:hover{
+                fill: @primaryColor;
+            }
+        }
+    }
+    &.file{
+        .fileInputText{
+            position: absolute;
+            left:@inputLeftPadding;
+            top:0;
+            right:0;
+            bottom:0;
+            line-height: @inputHeight;
+            font-size: 15px;
+            font-weight: 300;
+            font-family: @bodyFamily1;
+            color:@primaryColor;    
+            padding-right:50px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;        
+        }
+        input[type='file']{
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+        }        
+    }    
+}
+.file-input-field .filename-wrapper {
+    display: flex;
+    margin-top:15px;    
+    position: relative;    
+    min-height: 24px;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #f8f2d9;
+    border-radius: 5px;
+    .name{
+        font-size: 12px;
+        line-height: 18px;
+        color: #aa8b05;
+        word-wrap: break-word;        
+        width: 100%;
+        font-weight: 300;
+    }
+    .file-circle{
+        width: 23px;
+        height: 23px;
+        border-radius: 40px;
+        display: inline-block;
+        background: #fae9a1;
+        border: 1px solid #aa8b05;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #aa8b05;
+        font-size: 8px;
+        position: absolute;
+        left: 10px;
+        top: 8px;
+    }
+    .remove-file-icon{        
+        svg{
+            fill:#aa8b05;
+        }
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        &:hover{
+            svg{
+                fill: @primaryColor;
+            }
+        }
+    }
+    
+}
+.ui{
+    &.checkbox{
+        .box:after, label:after{
+            top:2px;
+            left:2px;
+        }
+        .box:before, label:before{
+            border-color:@primaryColor
+        }
+
+        input:checked~.box:before, input:checked~label:before, input:checked:focus~.box:before, input:checked:focus~label:before, input:not([type=radio]):indeterminate:focus~.box:before, input:not([type=radio]):indeterminate:focus~label:before{
+            background-color: @primaryColor;
+            border-color:@primaryColor;
+        }
+        input:checked~.box:after, input:checked~label:after, input:checked:focus~.box:after, input:checked:focus~label:after, input:not([type=radio]):indeterminate:focus~.box:after, input:not([type=radio]):indeterminate:focus~label:after{
+            color: transparent;
+            background: url(../../assets/images/white-checkmark.svg) no-repeat 2px 3px;
+        }
+        .box:before, label:before{
+            width: 21px;
+            height: 21px;
+            border-radius: 2px;
+        }
+        label{
+            font-size: 15px;
+            line-height: 1.4;
+            color:@primaryColor;
+            font-weight: 600;
+        }
+    }
+    &.radio, &.checkbox{
+        &.rewards-radio-button{
+            margin-right:10px;
+            margin-bottom: 10px;
+            &:last-child{
+                margin-right: 0;
+            }
+            label{
+                background-color: @inputBackground;
+                font-weight: 600 !important;
+                font-family: @bodyFamily1;
+                padding:17px;
+                font-size: 16px;
+                height: 50px;
+                border-radius: .28571429rem;
+                width: 90px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                text-align: center;                
+                &:before, &:after{
+                    visibility: hidden;
+                }
+                @media all and (max-width:767px){
+                    width: 78px;
+                    font-size: 12px;
+                }
+            }
+            input:checked + label{
+                background-color: @primaryColor;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.radio-buttons-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.ui.form .unique-push-wrapper{
+    .ui.grid {
+            margin: 0 -5px;
+            flex-direction: row;
+        
+        .column{
+            padding:5px;
+            width: 33.33%;            
+        }
+        .rewards-radio-button, label{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.create-voucher-page{
+    @media all and (max-width:991px){
+        .noti-time-column{
+            order:1
+        }
+        .alert-type-column, .noti-time-column ~ .column{
+            order:2
+        }
+    }
+}
+
+.consumer-dropdown {
+    position: relative;
+    .consumer-icon{
+        top:15px;
+        .inputIcon();
+        z-index: 11;
+    }
+}
+
+.ui.left.icon.select{
+    background-color: @inputBackground;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    position: relative;
+    svg{
+        position: absolute;
+        left: 20px;
+        fill:@primaryColor
+    } 
+    .disabled + svg{
+        opacity: 0.45;
+    }
+    .ui.selection.dropdown{
+        border: 0;
+        padding: 18px 37px 15px 60px !important;
+        background: none;
+        width: 100%;
+        font-family: @bodyFamily1;
+        min-height: @inputHeight;
+        .text{
+            font-weight: 300;
+            color: @primaryColor;
+        }
+    }
+}
+
+.ui.selection.active.dropdown .menu{
+    border-radius: 5px;
+    margin-top: 8px;
+    border: 0;
+}
+.ui.selection.dropdown>.dropdown.icon{
+    color:@primaryColor;
+    font-size: 22px;
+    top: 10px;
+    right: 10px;
+}
+
+.drop-zone-column .image-preview {
+    position: relative;    
+    background-color: #f8f2d9;
+    border-radius: 5px;
+    padding:20px;
+    img{
+        max-width: 100%;
+        max-height: 90px;        
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+    .remove-image-preview-icon{
+        position: absolute;
+        right: 10px;
+        top: 8px;   
+        cursor: pointer;
+        svg{
+            display: block;
+            fill: #aa8b05;
+        }
+        &:hover svg{
+            fill: @primaryColor;
+        }
+    }
+}
+.drop-zone{
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23454C50FF' stroke-width='1' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 5px;
+    border-radius: 5px;
+    background-color: @inputBackground;
+    text-align: center;
+    padding:24px 22px 0;
+    cursor: pointer;
+    min-height: 130px;
+    .upload-icon{
+        width: 39px;
+        margin:0 auto 5px;
+        svg{
+            fill: @primaryColor;
+        }
+    }
+    .file-size-text{
+        font-size: 15px;
+        line-height: 1.6;
+        color:@primaryColor;
+        font-weight: 300;
+        max-width: 200px;
+        margin:0 auto;
+        .upload-size{
+            font-size: 12px;
+            color:#a1a1a1;
+        }
+    }
+}
+
+.create-banner-page{
+    .drop-zone{
+        padding:14px 22px 10px;
+    }
+    .drop-zone-column .image-preview img{
+        max-height: 106px;
+    }
+}
+
+.merchant-disable-fields{
+    pointer-events:none;
+    opacity: 0.2;
+}
+
+.ui.form .error.message{
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    color: #fd6b59;    
+    
+    ul{
+        list-style: none;
+        li{
+            margin-left: 0;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: @bodyFamily2;
+            &::before{
+                visibility: hidden;
+            }
+        }
+    }
+}
+.ui.form .column{
+    .error.message{        
+        margin-bottom: -15px;
+    }
+}
+
+/* Export Dropdown starts */
+.bottom-actions-wrapper.with-export-btn{
+    @media all and (max-width: 991px)
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.export-dropdown-wrapper{
+    background-color: @primaryColor;
+    min-height: 50px;
+    border-radius: 5px;    
+    width: 170px;
+    @media all and (max-width:991px){
+        margin-bottom: 15px;
+    }
+    &:hover{
+        box-shadow: 0 0 10px -5px #000;
+    }
+    .select{
+        position: relative;
+        svg{
+            fill: #fff;
+            position: absolute;
+            right: 39px;
+            top: 50%;
+            margin-top: -8px;            
+        }
+    }
+    .ui.selection.dropdown{
+        background: none;
+        border:0;
+        width: auto;
+        padding: 0;
+        min-height: 50px;
+        width: 170px;
+        text-align: center;
+        line-height: 50px;
+        padding-right:15px;      
+        z-index: 1;  
+        &.visible>.text:not(.default){
+            color:#fff;
+            font-weight: 600;
+        }
+       > .text{
+            color:#fff;
+            font-size: 16px;
+            font-weight: 600;            
+        }
+        i.dropdown.icon{
+            display: none;
+        }
+        .menu>.item{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;        
+            color:@primaryColor;
+        }
+    }
+}
+
+/* Export Dropdown ends */
+
+.ui.form label, .ui.form .label{
+    font-size: 14px;
+    color:@primaryColor;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    &.labelOnly{
+        min-height: 19px;
+        @media all and (max-width:991px){
+            display: none;
+        }
+    }
+}
+
+.ui.left.icon.select .reset-country-dropdwn svg{
+    position: relative;
+    left: 0;
+}
+
+.useralert-segementDropdown {
+    .search {
+        margin-top: 7px !important;
+    }   
+}

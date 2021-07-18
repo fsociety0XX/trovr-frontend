@@ -1,0 +1,134 @@
+.staff-list-page{
+    .ui.grid{
+        margin:-10px -13px;
+        .column{
+            padding:10px 13px;
+            width: 25%;
+            @media all and (max-width:1900px){
+                width: 20%;
+            }
+            @media all and (max-width:1750px){
+                width: 33.33%;
+            }
+            @media all and (max-width:1200px){
+                width: 50%;
+            }
+            @media all and (max-width:900px){
+                width: 100%;
+            }
+        }
+    }
+    
+}
+.create-admin-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: @staff-card-height;
+    background-color: @staff-card-color;
+    border-radius: @staff-card-radius;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2300ACDCFF' stroke-width='1' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+border-radius: 10px;
+    .text{
+        font-size: 14px;
+        font-weight: 600;
+        color:@lightBlue;
+    }
+    .icon-wrapper{
+        margin-bottom: 6px;
+    }
+    &:hover{
+        box-shadow: 0 0 10px -5px rgb(0 0 0 / 50%);
+    }
+}
+
+.staff-card{    
+    
+    .staff-card-inner{
+        display: flex;
+    }
+    min-height: @staff-card-height;
+    background-color: @staff-card-color;
+    border-radius: @staff-card-radius;
+    padding:17px 20px 15px 20px;
+    .staff-image-wrapper{
+        @staff-image-dim:38px;
+        width: @staff-image-dim;
+        margin-right: 10px;
+        margin-top:3px;
+        img{
+            width: @staff-image-dim;
+            height: @staff-image-dim;
+            border-radius: @staff-image-dim;
+            object-fit: cover;
+        }
+    }
+    .right-column{
+        flex: 1;
+        width: 203px;
+        .name, .email, .user-level{
+            font-size: 16px;
+            line-height: 1.2;
+            color:@primaryColor;
+            font-weight: 600;
+        }
+        .email, .user-level{
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .name{
+            margin-bottom: 8px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .email{margin-bottom: 10px; white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;}
+        .user-level{
+            margin-bottom: 14px;
+        }
+    }
+        .btn-wrapper{
+            text-align: center;
+            Button{
+                background-color: #fff;
+                color:@lightBlue;
+                font-weight: 600;
+                font-size: 12px;
+                min-width: 78px;
+                height: 27px;
+                padding: 8px 10px;
+                margin-right: 10px;
+                &:hover{
+                    background-color: @lightBlue;
+                    color:#fff;
+                    svg{
+                        fill: #fff;
+                    }
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                svg{
+                    fill: @lightBlue;
+                    height: auto;
+                    margin-right: 6px;
+                }
+                &.edit{
+                    svg{
+                        width: 9px;                        
+                    }
+                }
+                &.delete{
+                    svg{
+                        width: 7px;
+                        position: relative;
+                        top:-1px;
+                    }
+                }
+            }
+        }
+    
+}

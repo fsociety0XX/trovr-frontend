@@ -1,0 +1,47 @@
+.accordion.ui{
+    .title{
+        border-bottom:1px solid @offwhite;
+        padding:16px 0 !important;
+        font-size: 16px !important;
+        line-height: 1.2;
+        font-weight: 600;
+        color:@primaryColor;
+        border-bottom-width:1px;
+        font-family: @bodyFamily1 !important;
+        position: relative;
+        &:before{
+            content: '';
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #434C51;
+            position: absolute;
+            right: 2px;
+            top: 22px;
+            transform: rotate(0);
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        &.active{
+            color:@lightBlue;
+            border-color:@lightBlue;
+            &:before{
+                transform: rotate(-90deg);
+            }
+        }
+        i.dropdown.icon{
+            display: none;
+        }        
+    }
+    .content{
+        font-size: 16px !important;
+        line-height: 1.5;
+        font-weight: 300;
+        color:@primaryColor;
+        border-bottom-width:1px;
+        font-family: @bodyFamily1 !important;
+    }
+    .accordion .title i.dropdown.icon{
+        display: none;
+    }
+}
